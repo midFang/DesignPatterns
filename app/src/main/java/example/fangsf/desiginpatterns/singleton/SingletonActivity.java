@@ -12,7 +12,6 @@ public class SingletonActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_singleton);
 
-
         SingleSample1.getInstance().println();
 
 
