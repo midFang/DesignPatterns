@@ -18,14 +18,25 @@ public class BuilderActivity extends AppCompatActivity {
         ConstraintLayout viewGroup = findViewById(R.id.ViewGroup);
 
 
-        NavigationBar bar = new NavigationBar.Builder(this, R.layout.ui_navigation_bar, viewGroup)
-                .setText(R.id.back_tv, "确认")
-                .setOnClickListener(R.id.back_tv, new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Toast.makeText(BuilderActivity.this, "click", Toast.LENGTH_SHORT).show();
-                    }
-                }).create();
+//        NavigationBar bar = new NavigationBar.Builder(this, R.layout.ui_navigation_bar, viewGroup)
+//                .setText(R.id.back_tv, "确认")
+//                .setOnClickListener(R.id.back_tv, new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        Toast.makeText(BuilderActivity.this, "click", Toast.LENGTH_SHORT).show();
+//                    }
+//                }).create();
+
+
+        DefaultNavigationBar defaultNavigationBar =
+                new DefaultNavigationBar.Builder(this, viewGroup)
+                        .setText("back")
+                        .setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Toast.makeText(BuilderActivity.this, "back", Toast.LENGTH_SHORT).show();
+                            }
+                        }).create();
 
 
     }

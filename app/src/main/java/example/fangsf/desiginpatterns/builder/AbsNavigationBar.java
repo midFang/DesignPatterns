@@ -24,6 +24,7 @@ public class AbsNavigationBar implements INavigation  {
         createNavigationBar(); //1, 填充ToolBarView, 2, 添加到父布局中 3, 设置参数
     }
 
+
     @Override
     public void createNavigationBar() {
         mNavigationBar = LayoutInflater.from(mBuilder.mContext)
@@ -36,6 +37,8 @@ public class AbsNavigationBar implements INavigation  {
         attachParams();
 
     }
+
+
 
     @Override
     public void attachParams() {
@@ -107,6 +110,7 @@ public class AbsNavigationBar implements INavigation  {
          * @return
          */
         public abstract AbsNavigationBar create();
+
 
     }
 
