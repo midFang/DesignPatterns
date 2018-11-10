@@ -22,6 +22,12 @@
                 android:onClick="singleton1"
                 android:text="单利设计模式" />
 
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="builderMode"
+                android:text="builder设计模式" />
+
 
         </LinearLayout>
 

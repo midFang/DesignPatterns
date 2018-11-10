@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import example.fangsf.desiginpatterns.builder.BuilderActivity;
 import example.fangsf.desiginpatterns.singleton.SingletonActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -19,4 +20,12 @@ public class MainActivity extends AppCompatActivity {
         // 单利设计模式
         startActivity(new Intent(this, SingletonActivity.class));
     }
+
+    public void builderMode(View view){
+
+        startActivity(new Intent(this, BuilderActivity.class));
+
+
+    }
+
 }

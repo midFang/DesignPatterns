@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".singleton.SingletonActivity"></activity>
+        <activity android:name=".singleton.SingletonActivity" />
+        <activity android:name=".builder.BuilderActivity"></activity>
     </application>
 
 </manifest>
