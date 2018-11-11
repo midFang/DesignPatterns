@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import java.io.PrintStream;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -14,16 +13,19 @@ import java.util.Map;
  * Created by apple on 2018/11/10
  * Useful:  基础的navigationBar
  */
-public class AbsNavigationBar implements INavigation  {
-    private Builder mBuilder;
+public class AbsNavigationBar<B extends AbsNavigationBar.Builder> implements INavigation  {
+    private B mBuilder;
     private View mNavigationBar;
 
-    public AbsNavigationBar(Builder builder) {
+    public AbsNavigationBar(B builder) {
         this.mBuilder = builder;
 
         createNavigationBar(); //1, 填充ToolBarView, 2, 添加到父布局中 3, 设置参数
     }
 
+    public B getBuilder() {
+        return mBuilder;
+    }
 
     @Override
     public void createNavigationBar() {
@@ -70,11 +72,11 @@ public class AbsNavigationBar implements INavigation  {
 
     // builder 构建类, 主要通过这个类来构建参数的,使用者,通过构建者对象,不需要了解具体内部的实现细节
     public static abstract class Builder<B extends AbsNavigationBar.Builder>{
-        private Context mContext;
-        private int mLayoutId;
-        private ViewGroup mParentView;
-        private HashMap<Integer, String > mTextMaps;
-        private HashMap<Integer, View.OnClickListener> mClickMaps;
+        public Context mContext;
+        public int mLayoutId;
+        public ViewGroup mParentView;
+        public HashMap<Integer, String > mTextMaps;
+        public HashMap<Integer, View.OnClickListener> mClickMaps;
 
 
         // 基类的bar, 设置父布局,layout

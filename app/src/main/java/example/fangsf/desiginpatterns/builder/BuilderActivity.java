@@ -31,12 +31,15 @@ public class BuilderActivity extends AppCompatActivity {
         DefaultNavigationBar defaultNavigationBar =
                 new DefaultNavigationBar.Builder(this, viewGroup)
                         .setText("back")
+                        .setLeftTextVisible(View.INVISIBLE)
                         .setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
                                 Toast.makeText(BuilderActivity.this, "back", Toast.LENGTH_SHORT).show();
                             }
                         }).create();
+
+
 
 
     }
