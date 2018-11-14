@@ -4,6 +4,7 @@
 
     <application
         android:allowBackup="true"
+        android:name=".App"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -17,7 +18,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".singleton.SingletonActivity" />
-        <activity android:name=".builder.BuilderActivity"></activity>
+        <activity android:name=".builder.BuilderActivity" />
+        <activity android:name=".factory.sample1.FactoryActivity"></activity>
     </application>
 
 </manifest>

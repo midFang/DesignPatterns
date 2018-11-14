@@ -29,6 +29,13 @@
                 android:text="builder设计模式" />
 
 
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="factoryMode"
+                android:text="factory设计模式" />
+
+
         </LinearLayout>
 
     </ScrollView>

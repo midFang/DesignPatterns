@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import example.fangsf.desiginpatterns.builder.BuilderActivity;
+import example.fangsf.desiginpatterns.factory.sample1.FactoryActivity;
 import example.fangsf.desiginpatterns.singleton.SingletonActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,7 +26,10 @@ public class MainActivity extends AppCompatActivity {
 
         startActivity(new Intent(this, BuilderActivity.class));
 
-
     }
 
+    public void factoryMode(View view) {
+
+        startActivity(new Intent(this, FactoryActivity.class));
+    }
 }
