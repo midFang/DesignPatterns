@@ -8,6 +8,7 @@ import android.view.View;
 import example.fangsf.desiginpatterns.builder.BuilderActivity;
 import example.fangsf.desiginpatterns.factory.sample1.FactoryActivity;
 import example.fangsf.desiginpatterns.singleton.SingletonActivity;
+import example.fangsf.desiginpatterns.wrapper.WrapperActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this, SingletonActivity.class));
     }
 
-    public void builderMode(View view){
+    public void builderMode(View view) {
 
         startActivity(new Intent(this, BuilderActivity.class));
 
@@ -31,5 +32,9 @@ public class MainActivity extends AppCompatActivity {
     public void factoryMode(View view) {
 
         startActivity(new Intent(this, FactoryActivity.class));
+    }
+
+    public void wrapperPattern(View view) {
+        startActivity(new Intent(this, WrapperActivity.class));
     }
 }
