@@ -1,11 +1,15 @@
 package example.fangsf.desiginpatterns.factory.sample1;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import example.fangsf.desiginpatterns.R;
+import example.fangsf.desiginpatterns.factory.sample2.IFactory;
+import example.fangsf.desiginpatterns.factory.sample2.IOMemoryFactory;
+import example.fangsf.desiginpatterns.factory.sample2.IOSPFactory;
 
 
 /**
@@ -29,43 +33,60 @@ public class FactoryActivity extends AppCompatActivity implements View.OnClickLi
 
     }
 
+
+    //简单工厂, 每次需要加判断case, 还需要加入ioType类型的判断
     @Override
     public void onClick(View v) {
 
-        String name = SpUtil.getInstance().getString("name");
 
-        mButton.setText(name);
+        IOHandler ioHandler = example.fangsf.desiginpatterns.factory.sample1.IOHandlerFactory.getFactory(IOHandlerFactory.IOType.SP);
 
-    }
-
-    public void click2(View view) {
-
-        IOHandler ioHandler = IOHandlerFactory.getFactory(IOHandlerFactory.IOType.SP);
-
-        ioHandler.saveString("name", "lisi");
+        ioHandler.saveString("name", "简单工厂");
 
         String name = ioHandler.getString("name");
 
+        ((Button) v).setText(name);
+
+    }
 
 
-        ((Button) view).setText(name);
+    /**
+     * 工厂方法模式 , 每次新增加功能, 都需要多增加一个类, 但是不用修改原有的类的, 开闭原则,
+     *
+     * @param view
+     */
+    public void click2(View view) {
+
+        IFactory iFactory = new IOMemoryFactory();
+        IOHandler ioHandler = iFactory.createHandler();
+        ioHandler.saveString("key", "工厂方法模式");
+
+        IFactory factory = new IOSPFactory();
+        IOHandler handler = factory.createHandler();
+        handler.saveString("key", "工厂方法模式");
+
+        Toast.makeText(this, "" + handler.getString("key"), Toast.LENGTH_SHORT).show();
+
+
+        ((Button) view).setText(ioHandler.getString("key"));
 
 
     }
 
+    /**
+     * 抽象工厂模式
+     *
+     * @param view
+     */
     public void click3(View view) {
 
-        IOHandler factory = IOHandlerFactory.getFactory(IOHandlerFactory.IOType.MEMORY);
-        factory.saveString("name", "xiaowu");
+        example.fangsf.desiginpatterns.factory.sample3.IOHandlerFactory instance = example.fangsf.desiginpatterns.factory.sample3.IOHandlerFactory.getInstance();
 
+        instance.getSpIoHandler().saveString("key", "抽象工厂模式");
 
+        ((Button) view).setText(instance.getInstance().getSpIoHandler().getString("key"));
 
-        String name = IOHandlerFactory.getFactory(IOHandlerFactory.IOType.MEMORY)
-                .getString("name");
-
-
-
-        ((Button) view).setText(name);
 
     }
+
 }

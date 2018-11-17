@@ -17,6 +17,11 @@ public class IOHandlerFactory {
     }
 
 
+    /**
+     * 这样做的方式, 每次添加新的功能, 都需要在这个改动, 加case判断, 加ioType类型
+     * @param IOType
+     * @return
+     */
     public static IOHandler getFactory(IOType IOType) {
 
         switch (IOType) {
