@@ -14,16 +14,15 @@ import java.util.ArrayList;
  */
 public class WrapperRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    // 需要对原来有的adapter进行装饰, 一般是通过构造函数进行扩展的
-    private RealAdapter mRealAdapter;
+    // 对原来的adapter通过构造方法传递进来,进行修饰
+    private RecyclerView.Adapter mRealAdapter;
     //头部和底部的view(参考HeaderViewListAdapter)
     private ArrayList<View> mHeaderViews;
     private ArrayList<View> mFooterViews;
 
 
-    public WrapperRecyclerAdapter(RealAdapter realAdapter) {
+    public WrapperRecyclerAdapter(RecyclerView.Adapter realAdapter) {
         mRealAdapter = realAdapter;
-
 
         mRealAdapter.registerAdapterDataObserver(new RecyclerView.AdapterDataObserver() {
             @Override
@@ -80,7 +79,7 @@ public class WrapperRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.Vi
         // 调用realAdapter的onBindViewHolder
         int numHeaders = getHeadersCount();
         if (position < numHeaders) {
-            return ;
+            return;
         }
         // Adapter
         final int adjPosition = position - numHeaders;
@@ -89,7 +88,7 @@ public class WrapperRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.Vi
             adapterCount = mRealAdapter.getItemCount();
             if (adjPosition < adapterCount) {
                 //mRealAdapter.getItemViewType(position), 兼容多布局的view
-                 mRealAdapter.onBindViewHolder((RealAdapter.ViewHolder) viewHolder, position);
+                mRealAdapter.onBindViewHolder(viewHolder, position);
             }
         }
 

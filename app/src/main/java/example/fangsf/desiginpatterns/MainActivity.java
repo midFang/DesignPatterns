@@ -8,6 +8,7 @@ import android.view.View;
 import example.fangsf.desiginpatterns.builder.BuilderActivity;
 import example.fangsf.desiginpatterns.factory.sample1.FactoryActivity;
 import example.fangsf.desiginpatterns.singleton.SingletonActivity;
+import example.fangsf.desiginpatterns.template.TemplateActivity;
 import example.fangsf.desiginpatterns.wrapper.WrapperActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -36,5 +37,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void wrapperPattern(View view) {
         startActivity(new Intent(this, WrapperActivity.class));
+    }
+
+    public void temelatePattern(View view) {
+        startActivity(new Intent(this, TemplateActivity.class));
     }
 }

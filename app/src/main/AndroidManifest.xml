@@ -20,7 +20,8 @@
         <activity android:name=".singleton.SingletonActivity" />
         <activity android:name=".builder.BuilderActivity" />
         <activity android:name=".factory.sample1.FactoryActivity" />
-        <activity android:name=".wrapper.WrapperActivity"></activity>
+        <activity android:name=".wrapper.WrapperActivity" />
+        <activity android:name=".template.TemplateActivity"></activity>
     </application>
 
 </manifest>

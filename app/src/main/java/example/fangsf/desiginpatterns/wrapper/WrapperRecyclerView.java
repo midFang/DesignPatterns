@@ -29,11 +29,10 @@ public class WrapperRecyclerView extends RecyclerView {
     }
 
 
-
     //重写adapter
     @Override
     public void setAdapter(@Nullable Adapter adapter) {
-        mAdapter = new WrapperRecyclerAdapter((RealAdapter) adapter);
+        mAdapter = new WrapperRecyclerAdapter(adapter);
         super.setAdapter(mAdapter);  // 使用装饰后的adapter
     }
 

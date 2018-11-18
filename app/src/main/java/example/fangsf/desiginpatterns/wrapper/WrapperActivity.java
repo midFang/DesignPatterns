@@ -38,7 +38,7 @@ public class WrapperActivity extends AppCompatActivity {
         RealAdapter realAdapter = new RealAdapter(this, mItems);
 //
 //        //进行装饰, 使用构造的方式进行扩展,不使用继承的方式
-//        WrapperRecyclerAdapter wrapperRecyclerAdapter = new WrapperRecyclerAdapter(realAdapter);
+        WrapperRecyclerAdapter wrapperRecyclerAdapter = new WrapperRecyclerAdapter(realAdapter);
 //
 //
 //

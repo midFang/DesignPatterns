@@ -47,7 +47,8 @@ public class RealAdapter extends RecyclerView.Adapter<RealAdapter.ViewHolder> {
             @Override
             public void onClick(View v) {
                 mItems.remove(i);
-                Toast.makeText(mContext, "删除"+i, Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext, "删除" + i, Toast.LENGTH_SHORT).show();
+                //这里删除了数据,但是wrapperRecyclerView使用的是wrapperRecyclerAdapter, 所以在wrapperRecyclerAdapter需要监听realAdapter的数据的变化,刷新适配器
                 notifyDataSetChanged();
             }
         });
