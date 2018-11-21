@@ -14,7 +14,7 @@ import example.fangsf.desiginpatterns.factory.sample2.IOSPFactory;
 
 /**
  * 工厂设计模式, 设计模式只是解决某一个特定情况下的应用场景,
- * 工厂设计模式: 通过子类构建对象
+ * 工厂设计模式: 通过子类构建对象 (一个工厂生产对应的产品)
  */
 public class FactoryActivity extends AppCompatActivity implements View.OnClickListener {
 

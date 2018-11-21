@@ -7,7 +7,7 @@ import android.view.ViewGroup;
  * Created by apple on 2018/11/10
  * Useful:
  */
-public class NavigationBar extends AbsNavigationBar{
+public class NavigationBar extends AbsNavigationBar<NavigationBar.Builder>{
 
 
     public NavigationBar(Builder builder) {
