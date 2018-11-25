@@ -22,7 +22,8 @@
         <activity android:name=".factory.sample1.FactoryActivity" />
         <activity android:name=".wrapper.WrapperActivity" />
         <activity android:name=".template.TemplateActivity" />
-        <activity android:name=".Strategy.StrategyActivity"></activity>
+        <activity android:name=".strategy.StrategyActivity" />
+        <activity android:name=".adapter.AdapterActivity"></activity>
     </application>
 
 </manifest>

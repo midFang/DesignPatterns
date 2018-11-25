@@ -53,6 +53,11 @@
                 android:onClick="StrategyPattern"
                 android:text="策略设计模式" />
 
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="adapterPattern"
+                android:text="适配器设计模式" />
 
         </LinearLayout>
 

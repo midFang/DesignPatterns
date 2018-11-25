@@ -5,7 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import example.fangsf.desiginpatterns.Strategy.StrategyActivity;
+import example.fangsf.desiginpatterns.strategy.StrategyActivity;
+import example.fangsf.desiginpatterns.adapter.AdapterActivity;
 import example.fangsf.desiginpatterns.builder.BuilderActivity;
 import example.fangsf.desiginpatterns.factory.sample1.FactoryActivity;
 import example.fangsf.desiginpatterns.singleton.SingletonActivity;
@@ -46,5 +47,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void StrategyPattern(View view) {
         startActivity(new Intent(this, StrategyActivity.class));
+    }
+
+    public void adapterPattern(View view) {
+        startActivity(new Intent(this, AdapterActivity.class));
     }
 }

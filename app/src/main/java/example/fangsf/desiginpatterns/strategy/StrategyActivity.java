@@ -1,14 +1,14 @@
-package example.fangsf.desiginpatterns.Strategy;
+package example.fangsf.desiginpatterns.strategy;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
 import example.fangsf.desiginpatterns.R;
-import example.fangsf.desiginpatterns.Strategy.sample1.FinanceManager;
-import example.fangsf.desiginpatterns.Strategy.sample2.AliFinance;
-import example.fangsf.desiginpatterns.Strategy.sample2.IFinance;
-import example.fangsf.desiginpatterns.Strategy.sample2.WXFinance;
+import example.fangsf.desiginpatterns.strategy.sample1.FinanceManager;
+import example.fangsf.desiginpatterns.strategy.sample2.AliFinance;
+import example.fangsf.desiginpatterns.strategy.sample2.IFinance;
+import example.fangsf.desiginpatterns.strategy.sample2.WXFinance;
 
 
 /**

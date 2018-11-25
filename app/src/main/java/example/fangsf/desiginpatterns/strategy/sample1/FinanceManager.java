@@ -1,4 +1,4 @@
-package example.fangsf.desiginpatterns.Strategy.sample1;
+package example.fangsf.desiginpatterns.strategy.sample1;
 
 /**
  * Created by fangsf on 2018/11/21.
