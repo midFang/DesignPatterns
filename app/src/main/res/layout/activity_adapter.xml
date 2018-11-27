@@ -12,9 +12,9 @@
         android:onClick="click1"
         android:layout_height="wrap_content" />
 
-    <example.fangsf.desiginpatterns.adapter.sample2.ListView
+    <example.fangsf.designpatterns.adapter.sample2.ListView
         android:layout_width="match_parent"
         android:id="@+id/lv"
-        android:layout_height="match_parent"></example.fangsf.desiginpatterns.adapter.sample2.ListView>
+        android:layout_height="match_parent"></example.fangsf.designpatterns.adapter.sample2.ListView>
 
 </android.support.constraint.ConstraintLayout>
