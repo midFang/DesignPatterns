@@ -1,4 +1,4 @@
-package example.fangsf.designpatterns.observer.sample1;
+package example.fangsf.designpatterns.observer.sample1.observer;
 
 /**
  * Created by fangsf on 2018/11/27.
@@ -6,5 +6,6 @@ package example.fangsf.designpatterns.observer.sample1;
  */
 public interface IWXUser {
 
+    void push(String article);
 
 }
