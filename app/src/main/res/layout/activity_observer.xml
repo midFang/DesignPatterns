@@ -22,4 +22,18 @@
         android:onClick="click2"
         android:layout_height="wrap_content" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:text="数据的更新和插入"
+        android:onClick="click4"
+        android:layout_height="wrap_content" />
+
+    <ListView
+        android:id="@+id/lv_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ListView>
+
+
 </LinearLayout>

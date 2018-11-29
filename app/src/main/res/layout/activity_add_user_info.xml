@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".observer.sample4.AddUserInfoActivity">
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:background="@null"
+        android:hint="请输入名字"
+        android:layout_height="50dp" />
+
+
+    <EditText
+        android:id="@+id/et_age"
+        android:layout_width="match_parent"
+        android:background="@null"
+        android:hint="请输入年龄"
+        android:layout_height="50dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:text="add"
+        android:onClick="click2"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:text="完成"
+        android:onClick="click3"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

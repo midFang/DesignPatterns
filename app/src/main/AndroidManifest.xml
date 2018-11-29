@@ -24,7 +24,8 @@
         <activity android:name=".template.TemplateActivity" />
         <activity android:name=".strategy.StrategyActivity" />
         <activity android:name=".adapter.AdapterActivity" />
-        <activity android:name=".observer.ObserverActivity"></activity>
+        <activity android:name=".observer.ObserverActivity" />
+        <activity android:name=".observer.sample4.AddUserInfoActivity"></activity>
     </application>
 
 </manifest>
