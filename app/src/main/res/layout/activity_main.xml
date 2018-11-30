@@ -65,6 +65,12 @@
                 android:onClick="observerPattern"
                 android:text="观察者设计模式" />
 
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="proxyPattern"
+                android:text="代理设计模式" />
+
         </LinearLayout>
 
     </ScrollView>

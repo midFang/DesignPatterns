@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import example.fangsf.designpatterns.observer.ObserverActivity;
+import example.fangsf.designpatterns.proxy.ProxyActivity;
 import example.fangsf.designpatterns.strategy.StrategyActivity;
 import example.fangsf.designpatterns.adapter.AdapterActivity;
 import example.fangsf.designpatterns.builder.BuilderActivity;
@@ -56,5 +57,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void observerPattern(View view) {
         startActivity(new Intent(this, ObserverActivity.class));
+    }
+
+    public void proxyPattern(View view) {
+        startActivity(new Intent(this, ProxyActivity.class));
     }
 }
