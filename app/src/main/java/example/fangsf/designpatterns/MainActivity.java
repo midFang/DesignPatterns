@@ -62,4 +62,8 @@ public class MainActivity extends AppCompatActivity {
     public void proxyPattern(View view) {
         startActivity(new Intent(this, ProxyActivity.class));
     }
+
+    public void PrototypePattern(View view) {
+
+    }
 }
