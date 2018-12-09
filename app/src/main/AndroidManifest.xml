@@ -30,7 +30,8 @@
         <activity android:name=".prototype.sample6.Activity1" />
         <activity android:name=".prototype.sample6.Activity2" />
         <activity android:name=".prototype.sample6.Activity3" />
-        <activity android:name=".iterator.IteratorActivity"></activity>
+        <activity android:name=".iterator.IteratorActivity" />
+        <activity android:name=".iterator.BottomTabActivity"></activity>
     </application>
 
 </manifest>
