@@ -3,12 +3,14 @@ package example.fangsf.designpatterns.iterator.sample3;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import example.fangsf.designpatterns.R;
 import example.fangsf.designpatterns.iterator.sample3.iterator.TabIterator;
 
 /**
@@ -21,39 +23,45 @@ public class TabBottomNavigation extends LinearLayout {
     private List<BottomTabItem> mBottomTabItems;
 
     private int mCurrentIndex = -1;
+    private Context mContext;
 
     public TabBottomNavigation(Context context) {
-        this(context,null);
+        this(context, null);
     }
 
-    public TabBottomNavigation(Context context,  AttributeSet attrs) {
+    public TabBottomNavigation(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public TabBottomNavigation(Context context,  AttributeSet attrs, int defStyleAttr) {
+    public TabBottomNavigation(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        this.mContext = context;
+
 
         setOrientation(HORIZONTAL);
 
         mBottomTabItems = new ArrayList<>();
 
+
     }
 
     public void addTabItem(TabIterator tabIterator) {
 
+
         mBottomTabItems.clear();
         int index = 0;
-        
-        while (tabIterator.hasNext()){
+        while (tabIterator.hasNext()) {
 
             BottomTabItem tabItem = tabIterator.next();
 
             View tabView = tabItem.getTabView();
 
             addView(tabView);
+            int childCount = TabBottomNavigation.this.getChildCount();
+            System.out.println(childCount);
 
             LinearLayout.LayoutParams params = (LayoutParams) tabView.getLayoutParams();
-            params.width = 1;
+            params.weight = 1;
             params.gravity = Gravity.CENTER;
             tabView.setLayoutParams(params);
 

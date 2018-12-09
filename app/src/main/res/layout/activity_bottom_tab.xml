@@ -13,6 +13,7 @@
 
     <example.fangsf.designpatterns.iterator.sample3.TabBottomNavigation
         android:id="@+id/tab_bottom"
+        android:background="@color/colorAccent"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
