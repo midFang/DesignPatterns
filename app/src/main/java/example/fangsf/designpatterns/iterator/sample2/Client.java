@@ -9,8 +9,6 @@ import example.fangsf.designpatterns.iterator.sample2.iterator.Iterator;
 public class Client {
 
     public static void main(String[] args){
-
-
         //查询系统中,是否有这个用户
 
         QQUserSystem qqUserSystem = new QQUserSystem();
