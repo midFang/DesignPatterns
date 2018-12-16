@@ -35,7 +35,7 @@ public class Client {
              * 理想结果
              * --zhangsan -- 22 --- 上海
              * --lisi -- 44 --- 江西
-             * 答应结果
+             * 打印结果
              * --zhangsan -- 22 --- 江西
              * --lisi -- 44 --- 江西
              */

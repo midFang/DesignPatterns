@@ -141,6 +141,9 @@ public class ObserverActivity extends AppCompatActivity implements Observer<User
         // 公众号 通知用户发布了文章信息
         wxPublicProObservable.notifyObservers();
 
+
+
+
     }
 
     public void click4(View view) {

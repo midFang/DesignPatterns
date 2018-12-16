@@ -21,6 +21,7 @@ public class IOMemroyHandler implements IOHandler {
     }
 
     @Override
+
     public String getString(String key) {
         return mLruCache.get(key);
     }

@@ -6,7 +6,6 @@ package example.fangsf.designpatterns.factory.sample1;
  */
 public class IOSPHandler implements IOHandler {
 
-
     @Override
     public void saveString(String key, String value) {
         SpUtil.getInstance().saveString(key,value);

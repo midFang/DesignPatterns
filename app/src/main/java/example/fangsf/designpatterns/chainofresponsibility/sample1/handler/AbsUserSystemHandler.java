@@ -4,7 +4,8 @@ package example.fangsf.designpatterns.chainofresponsibility.sample1.handler;
  * Created by fangsf on 2018/12/13.
  * Useful:  抽象处理者角色
  */
-public abstract class AbsUserSystemHandler implements IUserSystemHandler<AbsUserSystemHandler>, IUserSystem {
+public abstract class AbsUserSystemHandler
+        implements IUserSystemHandler<AbsUserSystemHandler>, IUserSystem {
 
 //    @Override
 //    public User queryUserInfo(String userName, String userId) {
