@@ -4,7 +4,7 @@ import android.icu.util.TaiwanCalendar;
 
 /**
  * Created by apple on 2018/12/16
- * Useful:
+ * Useful: 享元设计模式, 指的是就是对象的复用
  */
 public class Client {
 

@@ -31,7 +31,8 @@
         <activity android:name=".prototype.sample6.Activity2" />
         <activity android:name=".prototype.sample6.Activity3" />
         <activity android:name=".iterator.IteratorActivity" />
-        <activity android:name=".iterator.BottomTabActivity"></activity>
+        <activity android:name=".iterator.BottomTabActivity" />
+        <activity android:name=".command.sample3.CommandActivity"></activity>
     </application>
 
 </manifest>

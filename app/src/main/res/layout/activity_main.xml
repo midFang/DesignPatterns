@@ -83,6 +83,12 @@
                 android:onClick="iteratorPattern"
                 android:text="迭代器设计模式" />
 
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="commandPattern"
+                android:text="命令设计模式" />
+
         </LinearLayout>
 
     </ScrollView>

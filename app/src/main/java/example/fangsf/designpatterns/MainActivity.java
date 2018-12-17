@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import example.fangsf.designpatterns.command.sample3.CommandActivity;
 import example.fangsf.designpatterns.iterator.IteratorActivity;
 import example.fangsf.designpatterns.observer.ObserverActivity;
 import example.fangsf.designpatterns.prototype.sample6.Activity1;
@@ -71,5 +72,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void iteratorPattern(View view) {
         startActivity(new Intent(this,IteratorActivity.class));
+    }
+
+    public void commandPattern(View view) {
+        startActivity(new Intent(this, CommandActivity.class));
     }
 }
