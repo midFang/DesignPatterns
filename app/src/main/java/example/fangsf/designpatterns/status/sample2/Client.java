@@ -1,10 +1,8 @@
 package example.fangsf.designpatterns.status.sample2;
 
-import example.fangsf.designpatterns.status.sample2.status.PaidOrderStatus;
-
 /**
  * Created by fangsf on 2018/12/18.
- * Useful:
+ * Useful: 状态设计模式: 考虑 进行状态的拆分,
  */
 public class Client {
 

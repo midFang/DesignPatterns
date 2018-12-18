@@ -32,12 +32,16 @@ public class Order extends BaseOrder implements IOrderOperateStatus {
 
     // 假设这里我要评价这个订单,
     /**
+     *
      * public void appraise(){
      *     mOrderOperateStatus.appraise();
      *
      *     // 评价过后, 就是追加评价的状态了
      *     mOrderOperateStatus.追加评价();
      * }
+     *
+     *
+     * // 后期增加订单状态, 每一个具体的实现类, 都需要添加, 有没有更好的方式
      */
 
 
