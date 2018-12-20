@@ -1,10 +1,8 @@
-package example.fangsf.designpatterns.visitor;
+package example.fangsf.designpatterns.bridge;
 
 /**
  * Created by fangsf on 2018/12/18.
- * Useful: 访问者设计模式: 封装了一个类, 但是修改这个类的属性,是通过另外一个类的
- * <p>
- * 有两种咖啡, 一种是加糖和不加糖的(咖啡属性), 要求有大杯,中杯, 小杯,
+ * 桥接设计模式
  */
 public class Client {
 
