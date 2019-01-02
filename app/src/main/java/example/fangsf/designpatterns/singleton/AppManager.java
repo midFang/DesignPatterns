@@ -30,24 +30,36 @@ public class AppManager {
         return mInstance;
     }
 
+    /**
+     * 添加到栈中
+     * @param attachActivity
+     */
     public void addActivity(Activity attachActivity) {
         mActivities.add(attachActivity);
     }
 
 
+    /***
+     * 销毁这个实例  finishActivity  activity
+     * @param finishActivity
+     */
     public void finishActivity(Activity finishActivity) {
         int size = mActivities.size();
         for (int i = 0; i < size; i++) {
             Activity activity = mActivities.get(i);
             if (activity == finishActivity) {
                 mActivities.remove(i);
-                activity.finish();
+                 activity.finish();
                 i--;
                 size--;
             }
         }
     }
 
+    /**
+     * 销毁 activityClass activity
+     * @param activityClass
+     */
     public void finishActivity(Class<? extends Activity> activityClass) {
         int size = mActivities.size();
         for (int i = 0; i < size; i++) {
@@ -62,6 +74,9 @@ public class AppManager {
         }
     }
 
+    /**
+     * 销毁栈中顶层的activity
+     */
     public void finishActivity(){
         Activity activity = mActivities.lastElement();
         finishActivity(activity);
@@ -85,11 +100,12 @@ public class AppManager {
     }
 
     /**
-     * 从栈中移除activity, 在baseActivity需要单独的从栈中移除,防止内存泄漏
+     * 从栈中移除activity,
+     * 在baseActivity需要单独的从栈中移除,防止内存泄漏
      *
      * @param detachActivity
      */
-    public void removeActivity(Activity detachActivity) {
+    public void detachActivity(Activity detachActivity) {
         int size = mActivities.size();
         for (int i = 0; i < size; i++) {  //边循环,边移除, 可能是会不安全的
             Activity activity = mActivities.get(i);
